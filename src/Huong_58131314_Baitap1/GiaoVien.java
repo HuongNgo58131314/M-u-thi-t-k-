@@ -21,12 +21,32 @@ public class GiaoVien extends CaNhan{
         this.monDay = monDay;
         this.toBoMon = toBoMon;
     }
+
+    public String getMonDay() {
+        return monDay;
+    }
+
+    public void setMonDay(String monDay) {
+        this.monDay = monDay;
+    }
+
+    public String getToBoMon() {
+        return toBoMon;
+    }
+
+    public void setToBoMon(String toBoMon) {
+        this.toBoMon = toBoMon;
+    }
     
     
 
     @Override
     public String HienThiTT() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String thongTinGV = "";
+        thongTinGV = "Họ tên: " +this.hoten+ "Tuổi: "+this.tuoi+ "SDT: "+this.sdt+
+            "Địa chỉ: "+this.diaChi+ "Môn dạy: "+this.monDay+"Bộ môn: "+this.toBoMon;
+        System.out.println(thongTinGV);
+        return thongTinGV;
     }
     
 }

@@ -21,11 +21,31 @@ public class HocSinh extends CaNhan{
         this.lop = lop;
         this.nangKhieu = nangKhieu;
     }
+
+    public String getLop() {
+        return lop;
+    }
+
+    public void setLop(String lop) {
+        this.lop = lop;
+    }
+
+    public String getNangKhieu() {
+        return nangKhieu;
+    }
+
+    public void setNangKhieu(String nangKhieu) {
+        this.nangKhieu = nangKhieu;
+    }
     
 
     @Override
     public String HienThiTT() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+           String thongTinHS = "";
+                thongTinHS = "Họ tên: "+this.hoten+ " Tuổi: "+this.tuoi+ " Địa chỉ: "+this.diaChi+ 
+                   " SĐT: "+this.sdt+ " Lớp: "+this.lop+ " Năng khiếu: "+this.nangKhieu;
+                System.out.println(thongTinHS);
+           return thongTinHS;
     }
     
 }

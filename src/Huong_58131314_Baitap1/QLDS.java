@@ -13,22 +13,23 @@ import java.util.ArrayList;
  */
 public class QLDS implements IQLDS{
 
-    ArrayList<CaNhan> dsCaNhan = new ArrayList();
+    ArrayList<CaNhan> dsCaNhans = new ArrayList<>();
     @Override
     public int them(CaNhan p) {
-         dsCaNhan.add(p);
+         dsCaNhans.add(p);
             return 1;
     }
 
     @Override
     public int xoa(String ten) {
-        dsCaNhan.remove(0);
-            return 0;
+        if(dsCaNhans.removeIf(p -> p.hoten==ten))
+            return 1;
+        return 0;
     }
 
     @Override
     public void inDS() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        dsCaNhans.forEach(p->p.HienThiTT());
     }
     
 }
